@@ -1,6 +1,7 @@
 # Load the environment variables from both .env files
-source ../configs/general.env
-source ../configs/websocket.env
+SCRIPT_DIR=$(dirname "$0")
+source $SCRIPT_DIR/../configs/general.env
+source $SCRIPT_DIR/../configs/websocket.env
 
 ffmpeg -i $NEWS_URL -loglevel debug -vn -acodec copy -f wav pipe:1 2>ffmpeg.log | \
 ffmpeg -y -i pipe:0 -ac 1 -ar 16000 -f s16le -acodec pcm_s16le pipe:1 2>>ffmpeg.log | \
