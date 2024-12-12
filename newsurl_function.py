@@ -56,6 +56,10 @@ def update_news_url():
         with open(CONFIGS_DIR / "news_url.txt", "w") as f:
             f.write(news_url)
 
+        # Save the news_url as NEWS_URL in the .env file
+        with open(CONFIGS_DIR / "general.env", "w") as f:
+            f.write(f"NEWS_URL={news_url}\n")
+
 
         answer_text = f"Ссылка на видеопоток обновлена: \n{news_url}"
         print(answer_text)
