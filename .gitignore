@@ -1,3 +1,6 @@
+venv
+
+.gitconfig
 .DS_Store
 .huskyrc.json
 out
