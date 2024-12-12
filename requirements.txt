@@ -4,7 +4,7 @@ matplotlib
 
 telebot
 bs4
-opencv
+opencv-python
 
 # dotenv
 python-dotenv
