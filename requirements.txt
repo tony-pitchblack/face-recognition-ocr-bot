@@ -1,0 +1,10 @@
+# powershell -ExecutionPolicy Bypass
+numpy
+matplotlib
+
+telebot
+bs4
+opencv
+
+# dotenv
+python-dotenv
